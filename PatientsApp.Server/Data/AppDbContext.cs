@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PatientsApp.Models;
-using System.Collections.Generic;
 
 namespace PatientsApp.Data
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser> 
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
